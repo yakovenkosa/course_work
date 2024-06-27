@@ -12,7 +12,7 @@ file_path_log = os.path.join(current_dir, "../logs", "utils.log")
 logger = logger_setup("utils", file_path_log)
 
 
-# Веб страница главное
+# Веб страница главно
 def get_read_excel(file_path: str) -> List[Dict]:
     """Функция принимает путь до xlsx файла и создает список словарей с транзакциями"""
     try:
