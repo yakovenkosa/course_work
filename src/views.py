@@ -3,9 +3,19 @@ import os
 from typing import Any
 
 from dotenv import load_dotenv
-from utils import (filter_transactions_by_date, final_processing, get_cards_info, get_exchange_rates, get_greeting,
-                       get_read_excel, get_stocks_cost, get_top_5_transactions, process_expenses,
-                       process_expenses_and_income, process_income)
+from utils import (
+    filter_transactions_by_date,
+    final_processing,
+    get_cards_info,
+    get_exchange_rates,
+    get_greeting,
+    get_read_excel,
+    get_stocks_cost,
+    get_top_5_transactions,
+    process_expenses,
+    process_expenses_and_income,
+    process_income,
+)
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(current_dir, "../data", "operations.xls")
