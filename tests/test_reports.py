@@ -121,3 +121,8 @@ def test_spending_by_workday() -> None:
         "Выходной": 750.0,  # Средняя сумма операций по выходным дням
     }
     assert json.loads(result_given_date) == expected_result_given_date
+
+
+test_spending_by_category()
+test_spending_by_weekday()
+test_spending_by_workday()
