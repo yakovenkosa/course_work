@@ -1,10 +1,28 @@
 from typing import Any
-from config import (api_key_currency, api_key_stocks, date, input_data_reports, input_date_str, limit, month, search,
-                        search_reports, transactions, transactions_reports, user_settings, year)
-from reports import spending_by_category, spending_by_weekday, spending_by_workday
-from services import (analyze_cashback, find_person_to_person_transactions, investment_bank,
-                          search_transaction_by_mobile_phone, search_transactions_by_user_choice)
-from views import web_page_event, web_page_event_dop, web_page_home
+from src.config import (
+    api_key_currency,
+    api_key_stocks,
+    date,
+    input_data_reports,
+    input_date_str,
+    limit,
+    month,
+    search,
+    search_reports,
+    transactions,
+    transactions_reports,
+    user_settings,
+    year,
+)
+from src.reports import spending_by_category, spending_by_weekday, spending_by_workday
+from src.services import (
+    analyze_cashback,
+    find_person_to_person_transactions,
+    investment_bank,
+    search_transaction_by_mobile_phone,
+    search_transactions_by_user_choice,
+)
+from src.views import web_page_event, web_page_event_dop, web_page_home
 
 
 def main() -> Any:
