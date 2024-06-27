@@ -2,10 +2,10 @@ import json
 import os
 from datetime import datetime, timedelta
 from typing import Any, Dict, List
-
 import pandas as pd
 import requests
 from logger import logger_setup
+
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 file_path_log = os.path.join(current_dir, "../logs", "utils.log")
@@ -18,11 +18,12 @@ def get_read_excel(file_path: str) -> List[Dict]:
     try:
         data = pd.read_excel(file_path)
         logger.info("файл перекодирован")
-        return data.to_dict(orient='records')
+        return data.to_dict(orient="records")
     except Exception as e:
         print(f"Ошибка {e}")
         logger.error(f"Ошибка {e}")
         return []
+
 
 def get_greeting() -> str:
     """Функция определяет время суток и выводит приветствие соответствующее определённому времени"""
@@ -54,9 +55,11 @@ def filter_transactions_by_date(transactions: list[dict], input_date_str: str) -
     filtered_transactions = [
         transaction
         for transaction in transactions
-        if start_date <= parse_date(transaction["Дата операции"]) <= end_date]
+        if start_date <= parse_date(transaction["Дата операции"]) <= end_date
+    ]
     logger.info(f"Транзакции в списке отфильтрованы по датам от {start_date} до {end_date}")
     return filtered_transactions
+
 
 def get_cards_info(transactions: list[dict]) -> list[dict]:
     """Функция получает номера карт, общую сумму расходов и кэшбек"""
@@ -161,6 +164,7 @@ def get_stocks_cost(companies: List[str], api_key_stocks: str) -> List[Dict]:
 
 
 # Веб страница события
+
 
 def process_expenses(df: pd.DataFrame) -> dict[str, Any]:
     """Функция сортировки трат по категории и убыванию"""
