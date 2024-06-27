@@ -1,9 +1,9 @@
 import json
 import os
-
 import pandas as pd
 from dotenv import load_dotenv
-from utils import get_read_excel
+from src.utils import get_read_excel
+
 
 load_dotenv()
 api_key_currency = os.getenv("API_KEY_CURRENCY")
